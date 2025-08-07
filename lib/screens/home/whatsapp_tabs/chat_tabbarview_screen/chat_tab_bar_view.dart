@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:medichat/core/utils/app_images/app_images.dart';
-import 'package:medichat/widgets/personalChat/personal_chat.dart';
-import 'package:medichat/widgets/customChatTile/custom_chat_tile.dart';
+import 'package:chatee/core/utils/app_images/app_images.dart';
+import 'package:chatee/widgets/personalChat/personal_chat.dart';
+import 'package:chatee/widgets/customChatTile/custom_chat_tile.dart';
 
 class ChatTabBarView extends StatelessWidget {
   const ChatTabBarView({super.key});

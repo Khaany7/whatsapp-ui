@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.medichat"
+    namespace = "com.example.chatee"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -24,7 +24,7 @@ android {
         
 
 defaultConfig {
-        applicationId = "com.example.medichat"
+        applicationId = "com.example.chatee"
         minSdk =  23
         targetSdk = flutter.targetSdkVersion
          targetSdk = flutter.targetSdkVersion
@@ -45,4 +45,12 @@ defaultConfig {
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+  implementation(platform("com.google.firebase:firebase-bom:34.0.0"))
+  // Add Firebase SDKs you need, e.g.:
+  implementation("com.google.firebase:firebase-auth")
+  implementation("com.google.firebase:firebase-firestore")
+  // ...other dependencies...
 }

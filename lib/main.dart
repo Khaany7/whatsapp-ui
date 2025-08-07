@@ -1,10 +1,10 @@
 import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:medichat/core/utils/text_theme/text_theme.dart';
-import 'package:medichat/firebase_options.dart';
-import 'package:medichat/providers/multiapp_providers/multiapp_providers.dart';
-import 'package:medichat/screens/auth/welcome_screen/welcome_screen.dart';
+import 'package:chatee/core/utils/text_theme/text_theme.dart';
+import 'package:chatee/firebase_options.dart';
+import 'package:chatee/providers/multiapp_providers/multiapp_providers.dart';
+import 'package:chatee/screens/auth/welcome_screen/welcome_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 

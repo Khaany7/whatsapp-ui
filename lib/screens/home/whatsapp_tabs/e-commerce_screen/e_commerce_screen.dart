@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medichat/screens/home/ai_clothing_screen/ai_clothing_screen.dart';
+import 'package:chatee/screens/home/ai_clothing_screen/ai_clothing_screen.dart';
 
 import '../../../../widgets/infoCard/info_card.dart';
 import '../../Ai_chat_screen/ai_medical_chat_screen.dart';

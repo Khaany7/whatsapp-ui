@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "559444074636",
-    "project_id": "medichat-a2965",
-    "storage_bucket": "medichat-a2965.firebasestorage.app"
+    "project_number": "366250828354",
+    "project_id": "chatee-app25",
+    "storage_bucket": "chatee-app25.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:559444074636:android:d43cac72f8a1b56dbf1ba9",
+        "mobilesdk_app_id": "1:366250828354:android:5bd88837a33cadbc7803db",
         "android_client_info": {
-          "package_name": "com.example.medichat"
+          "package_name": "com.example.chatee"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCUnVZl7bPnICndZEEkPkk98Y57zDk0uwY"
+          "current_key": "AIzaSyDK43_BhgrOfeO9Bhw5U74lAFzi5g1kJ_w"
         }
       ],
       "services": {

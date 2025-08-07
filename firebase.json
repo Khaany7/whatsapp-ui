@@ -1,1 +1,21 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"medichat-a2965","appId":"1:559444074636:android:d43cac72f8a1b56dbf1ba9","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"medichat-a2965","configurations":{"android":"1:559444074636:android:d43cac72f8a1b56dbf1ba9"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "chatee-app25",
+          "appId": "1:366250828354:android:5bd88837a33cadbc7803db",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "chatee-app25",
+          "configurations": {
+            "android": "1:366250828354:android:5bd88837a33cadbc7803db"
+          }
+        }
+      }
+    }
+  }
+}

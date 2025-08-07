@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:medichat/core/utils/custom_button/custom_button.dart';
-import 'package:medichat/screens/auth/otpScreen/otp_screen.dart';
+import 'package:chatee/core/utils/custom_button/custom_button.dart';
+import 'package:chatee/screens/auth/otpScreen/otp_screen.dart';
 
 class PhoneNumberScreen extends StatelessWidget {
   final TextEditingController phoneController = TextEditingController();

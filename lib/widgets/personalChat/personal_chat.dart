@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:medichat/providers/controllers/chat_provider/chat_provider.dart';
+import 'package:chatee/providers/controllers/chat_provider/chat_provider.dart';
 
 class PersonalChat extends StatelessWidget {
   final String username;

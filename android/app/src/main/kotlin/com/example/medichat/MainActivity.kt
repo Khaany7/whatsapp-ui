@@ -1,4 +1,4 @@
-package com.example.medichat
+package com.example.chatee
 
 import io.flutter.embedding.android.FlutterActivity
 

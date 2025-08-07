@@ -1,8 +1,8 @@
-import 'package:medichat/providers/controllers/ai_chat_provider/medical_ai_chat_provider.dart';
-import 'package:medichat/providers/controllers/chat_provider/chat_provider.dart';
-import 'package:medichat/providers/controllers/clothing_provider/clothing_provider.dart';
+import 'package:chatee/providers/controllers/ai_chat_provider/medical_ai_chat_provider.dart';
+import 'package:chatee/providers/controllers/chat_provider/chat_provider.dart';
+import 'package:chatee/providers/controllers/clothing_provider/clothing_provider.dart';
 
-import 'package:medichat/providers/controllers/validation/validation.dart';
+import 'package:chatee/providers/controllers/validation/validation.dart';
 import 'package:provider/provider.dart';
 import '../controllers/image_picker/image_pickerController.dart';
 import '../controllers/personalChat/personal_chat_provider.dart';

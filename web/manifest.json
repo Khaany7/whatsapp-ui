@@ -1,6 +1,6 @@
 {
-    "name": "medichat",
-    "short_name": "medichat",
+    "name": "chatee",
+    "short_name": "chatee",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

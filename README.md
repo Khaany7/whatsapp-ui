@@ -1,4 +1,4 @@
-# medichat
+# chatee
 
 A new Flutter project.
 

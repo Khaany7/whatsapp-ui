@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:medichat/core/utils/color_utils/app_colors.dart';
-import 'package:medichat/providers/controllers/clothing_provider/clothing_provider.dart';
-import 'package:medichat/screens/home/whatsapp_dashboard_screen/dashboard_screen.dart';
+import 'package:chatee/core/utils/color_utils/app_colors.dart';
+import 'package:chatee/providers/controllers/clothing_provider/clothing_provider.dart';
+import 'package:chatee/screens/home/whatsapp_dashboard_screen/dashboard_screen.dart';
 import 'package:provider/provider.dart';
-import 'package:medichat/providers/controllers/ai_chat_provider/medical_ai_chat_provider.dart';
+import 'package:chatee/providers/controllers/ai_chat_provider/medical_ai_chat_provider.dart';
 import 'package:sizer/sizer.dart';
 
 class AiClothingScreen extends StatelessWidget {

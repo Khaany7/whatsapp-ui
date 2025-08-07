@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medichat/core/utils/color_utils/app_colors.dart';
+import 'package:chatee/core/utils/color_utils/app_colors.dart';
 
 import '../../screens/home/profile_screen/profile_screen.dart';
 

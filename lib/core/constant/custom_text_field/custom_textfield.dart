@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medichat/core/utils/color_utils/app_colors.dart';
+import 'package:chatee/core/utils/color_utils/app_colors.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
