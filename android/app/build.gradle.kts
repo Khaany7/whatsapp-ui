@@ -11,7 +11,8 @@ plugins {
 android {
     namespace = "com.example.chatee"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -21,17 +22,16 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
     }
-        
 
-defaultConfig {
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.chatee"
-        minSdk =  23
+        // You can update the following values to match your application needs.
+        // For more information, see: https://flutter.dev/to/review-gradle-config.
+        minSdk = 23
         targetSdk = flutter.targetSdkVersion
-         targetSdk = flutter.targetSdkVersion
-        versionCode = 1  // ✅ Yeh line add karein agar missing hai
-        versionName = "1.0"  // ✅ Yeh bhi add karein agar missing hai
-       
-       
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
     }
 
     buildTypes {
@@ -45,12 +45,4 @@ defaultConfig {
 
 flutter {
     source = "../.."
-}
-
-dependencies {
-  implementation(platform("com.google.firebase:firebase-bom:34.0.0"))
-  // Add Firebase SDKs you need, e.g.:
-  implementation("com.google.firebase:firebase-auth")
-  implementation("com.google.firebase:firebase-firestore")
-  // ...other dependencies...
 }

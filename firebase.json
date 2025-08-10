@@ -3,16 +3,16 @@
     "platforms": {
       "android": {
         "default": {
-          "projectId": "chatee-app25",
-          "appId": "1:366250828354:android:5bd88837a33cadbc7803db",
+          "projectId": "chatee-25",
+          "appId": "1:957449753136:android:8408450107305f6a37d3f5",
           "fileOutput": "android/app/google-services.json"
         }
       },
       "dart": {
         "lib/firebase_options.dart": {
-          "projectId": "chatee-app25",
+          "projectId": "chatee-25",
           "configurations": {
-            "android": "1:366250828354:android:5bd88837a33cadbc7803db"
+            "android": "1:957449753136:android:8408450107305f6a37d3f5"
           }
         }
       }

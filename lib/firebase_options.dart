@@ -53,10 +53,10 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDK43_BhgrOfeO9Bhw5U74lAFzi5g1kJ_w',
-    appId: '1:366250828354:android:5bd88837a33cadbc7803db',
-    messagingSenderId: '366250828354',
-    projectId: 'chatee-app25',
-    storageBucket: 'chatee-app25.firebasestorage.app',
+    apiKey: 'AIzaSyDh8bRGYk8pg2bmSNgTUD0up8NPqp7B-Ic',
+    appId: '1:957449753136:android:8408450107305f6a37d3f5',
+    messagingSenderId: '957449753136',
+    projectId: 'chatee-25',
+    storageBucket: 'chatee-25.firebasestorage.app',
   );
 }
