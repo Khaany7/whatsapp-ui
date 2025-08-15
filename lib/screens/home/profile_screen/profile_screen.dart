@@ -2,11 +2,37 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../providers/controllers/image_picker/image_pickerController.dart';
+import 'package:firebase_storage/firebase_storage.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 
-  void saveProfile(BuildContext context) {
+  @override
+  _ProfileScreenState createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
+  String? profilePicUrl;
+
+  @override
+  void initState() {
+    super.initState();
+    loadProfile();
+  }
+
+  Future<void> loadProfile() async {
+    // Replace with your phone number logic
+    final phoneNumber = Provider.of<ProfileProvider>(context, listen: false).phoneNumber;
+    final doc = await FirebaseFirestore.instance.collection('users').doc(phoneNumber).get();
+    if (doc.exists) {
+      setState(() {
+        profilePicUrl = doc.data()?['profilePic'];
+      });
+    }
+  }
+
+  void saveProfile(BuildContext context) async {
     final provider = Provider.of<ProfileProvider>(context, listen: false);
 
     if (!provider.validateProfile()) {
@@ -18,11 +44,42 @@ class ProfileScreen extends StatelessWidget {
       return;
     }
 
-    ScaffoldMessenger.of(
-      context,
-    ).showSnackBar(const SnackBar(content: Text("Profile Saved Successfully")));
+    try {
+      if (provider.pickedImage == null || !File(provider.pickedImage!.path).existsSync()) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("No image selected or file not found")),
+        );
+        return;
+      }
 
-    provider.clear();
+      final imageFile = File(provider.pickedImage!.path);
+      final storageRef = FirebaseStorage.instance
+          .ref()
+          .child('profile_pics/${provider.phoneNumber}'); // No extension needed
+      await storageRef.putFile(imageFile);
+      final downloadUrl = await storageRef.getDownloadURL();
+
+      await FirebaseFirestore.instance.collection('users').doc(provider.phoneNumber).set({
+        'name': provider.nameController.text.trim(),
+        'phone': provider.phoneNumber,
+        'profilePic': downloadUrl,
+        'createdAt': FieldValue.serverTimestamp(),
+      });
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text("Profile Saved Successfully")),
+      );
+
+      provider.clear();
+
+      // Reload profile data to update UI
+      await loadProfile();
+
+    } catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Failed to save profile: $e")),
+      );
+    }
   }
 
   @override
@@ -53,9 +110,11 @@ class ProfileScreen extends StatelessWidget {
                     backgroundImage:
                         provider.pickedImage != null
                             ? FileImage(File(provider.pickedImage!.path))
-                            : null,
+                            : profilePicUrl != null
+                                ? NetworkImage(profilePicUrl!)
+                                : null,
                     child:
-                        provider.pickedImage == null
+                        provider.pickedImage == null && profilePicUrl == null
                             ? Icon(Icons.person, size: 70, color: Colors.grey)
                             : null,
                   ),
